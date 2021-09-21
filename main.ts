@@ -1,10 +1,16 @@
-let smurfen = 0
 input.onButtonPressed(Button.A, function () {
-    basic.showNumber(1 + smurfen)
-    smurfen = 1 + smurfen
+    smurfen += emmer + 1
+    basic.showNumber(smurfen)
 })
+let smurfen = 0
+let emmer = 0
+emmer = 0
+smurfen = 0
 basic.forever(function () {
     if (smurfen == 10) {
         basic.showString("gewonnen!")
+    }
+    if (smurfen >= 11) {
+        basic.clearScreen()
     }
 })
